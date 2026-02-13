@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <clipPath id="left">
+      <rect x="0" y="0" width="16" height="32"/>
+    </clipPath>
+    <clipPath id="right">
+      <rect x="16" y="0" width="16" height="32"/>
+    </clipPath>
+  </defs>
+  <!-- Left half: filled -->
+  <g clip-path="url(#left)">
+    <path d="M12 3 L12 13 L4 27 Q3 29 5 30 L27 30 Q29 29 28 27 L20 13 L20 3 Z"
+          fill="#b35c3a" stroke="none"/>
+    <rect x="10" y="2" width="12" height="2" rx="1" fill="#b35c3a"/>
+  </g>
+  <!-- Right half: outline only -->
+  <g clip-path="url(#right)">
+    <path d="M12 3 L12 13 L4 27 Q3 29 5 30 L27 30 Q29 29 28 27 L20 13 L20 3 Z"
+          fill="none" stroke="#b35c3a" stroke-width="1.8"/>
+    <rect x="10" y="2" width="12" height="2" rx="1" fill="none" stroke="#b35c3a" stroke-width="1.8"/>
+  </g>
+  <!-- Center dividing line -->
+  <line x1="16" y1="2" x2="16" y2="30" stroke="#fafaf8" stroke-width="1.2"/>
+</svg>
