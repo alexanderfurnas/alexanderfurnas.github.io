@@ -269,6 +269,54 @@ h3:first-child { margin-top: 0; }
   margin-bottom: 1.6rem;
 }
 
+/* ——— Book details expand ——— */
+.book-details {
+  margin-top: 0.75rem;
+}
+
+.book-details summary {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s;
+}
+
+.book-details summary::-webkit-details-marker { display: none; }
+
+.book-details summary::before {
+  content: '▸';
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.book-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.book-details summary:hover { color: var(--text); }
+
+.book-summary {
+  margin-top: 0.75rem;
+  padding: 1rem 1.1rem;
+  background: var(--accent-light);
+  border-radius: 4px;
+  border-left: 2px solid var(--accent-mid);
+}
+
+.book-summary p {
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.book-summary p:last-child { margin-bottom: 0; }
+
 /* ——— Generic list items (teaching, service, writing) ——— */
 .item {
   margin-bottom: 1.4rem;
