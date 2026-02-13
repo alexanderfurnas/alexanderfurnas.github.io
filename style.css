@@ -109,8 +109,9 @@ main {
 
 .hero-photo img {
   width: 120px;
-  height: 120px;
+  height: 160px;
   object-fit: cover;
+  object-position: top;
   border-radius: 6px;
   filter: grayscale(15%);
 }
