@@ -165,10 +165,10 @@ main {
 
 /* ——— Sections ——— */
 h2 {
-  font-size: 0.72rem;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: var(--accent);
   margin-bottom: 1.75rem;
   display: flex;
@@ -184,10 +184,9 @@ h2::after {
 }
 
 h3 {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
   color: var(--muted);
   margin-bottom: 1.25rem;
   margin-top: 2.75rem;
