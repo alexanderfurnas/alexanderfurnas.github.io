@@ -95,6 +95,26 @@ main {
 /* ——— Hero ——— */
 .hero { margin-bottom: 2.5rem; }
 
+.hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.hero-text { flex: 1; }
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(15%);
+}
+
 .hero h1 {
   font-size: 2.4rem;
   font-weight: 700;
@@ -400,6 +420,8 @@ footer {
 
 /* ——— Responsive ——— */
 @media (max-width: 600px) {
+  .hero-content { flex-direction: column-reverse; gap: 1.5rem; }
+  .hero-photo img { width: 120px; height: 120px; }
   .nav-links { gap: 1rem; }
   .nav-links a { font-size: 0.78rem; }
   .nav-name { font-size: 0.88rem; }
