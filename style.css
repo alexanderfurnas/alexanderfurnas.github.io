@@ -211,6 +211,17 @@ h3:first-child { margin-top: 0; }
   margin-top: 0.15rem;
 }
 
+.pub-link {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.pub-link:hover {
+  border-color: var(--text);
+}
+
 .pub-item.highlight {
   border-left: 2px solid #bbb;
   padding-left: 1rem;
