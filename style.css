@@ -93,11 +93,11 @@ main {
 }
 
 /* ——— Hero ——— */
-.hero { margin-bottom: 2.5rem; }
+.hero { margin-bottom: 0; }
 
 .hero-content {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2.5rem;
 }
 
@@ -105,11 +105,14 @@ main {
 
 .hero-photo {
   flex-shrink: 0;
+  display: flex;
 }
 
 .hero-photo img {
-  width: 130px;
-  height: auto;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
   border-radius: 6px;
   filter: grayscale(15%);
 }
@@ -173,8 +176,11 @@ main {
 /* ——— Bio ——— */
 .bio {
   margin-bottom: 3.5rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
+  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  margin-top: 2rem;
 }
 
 .bio p {
