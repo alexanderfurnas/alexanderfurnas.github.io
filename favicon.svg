@@ -1,24 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="left">
-      <rect x="0" y="0" width="16" height="32"/>
-    </clipPath>
-    <clipPath id="right">
-      <rect x="16" y="0" width="16" height="32"/>
-    </clipPath>
+    <linearGradient id="funnel-g" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#35363f"/>
+      <stop offset="100%" stop-color="#1f2028"/>
+    </linearGradient>
   </defs>
-  <!-- Left half: filled -->
-  <g clip-path="url(#left)">
-    <path d="M12 3 L12 13 L4 27 Q3 29 5 30 L27 30 Q29 29 28 27 L20 13 L20 3 Z"
-          fill="#b35c3a" stroke="none"/>
-    <rect x="10" y="2" width="12" height="2" rx="1" fill="#b35c3a"/>
-  </g>
-  <!-- Right half: outline only -->
-  <g clip-path="url(#right)">
-    <path d="M12 3 L12 13 L4 27 Q3 29 5 30 L27 30 Q29 29 28 27 L20 13 L20 3 Z"
-          fill="none" stroke="#b35c3a" stroke-width="1.8"/>
-    <rect x="10" y="2" width="12" height="2" rx="1" fill="none" stroke="#b35c3a" stroke-width="1.8"/>
-  </g>
-  <!-- Center dividing line -->
-  <line x1="16" y1="2" x2="16" y2="30" stroke="#fafaf8" stroke-width="1.2"/>
+
+  <!-- Input symbols: document, chart, speech bubble, beaker, dollar, network -->
+  <rect x="14" y="10" width="10" height="14" rx="2.5" fill="#5b8def" opacity="0.55"/>
+  <line x1="17" y1="15" x2="21" y2="15" stroke="#0e0f13" stroke-width="0.7" opacity="0.4"/>
+  <line x1="17" y1="17.5" x2="21" y2="17.5" stroke="#0e0f13" stroke-width="0.7" opacity="0.4"/>
+
+  <rect x="30" y="6" width="12" height="12" rx="2.5" fill="#d4a843" opacity="0.5"/>
+  <rect x="33" y="11" width="2" height="4" rx="0.5" fill="#0e0f13" opacity="0.3"/>
+  <rect x="36.5" y="9" width="2" height="6" rx="0.5" fill="#0e0f13" opacity="0.3"/>
+
+  <path d="M50,8 h10 a2.5,2.5 0 0 1 2.5,2.5 v6 a2.5,2.5 0 0 1 -2.5,2.5 h-6 l-3,3 v-3 h-1 a2.5,2.5 0 0 1 -2.5,-2.5 v-6 a2.5,2.5 0 0 1 2.5,-2.5z" fill="#6ec4a0" opacity="0.5"/>
+
+  <path d="M72,8 L72,14 L68,22 h10 L74,14 L74,8 Z" fill="#9b7ed8" opacity="0.5" stroke="#9b7ed8" stroke-width="0.5" stroke-linejoin="round" stroke-opacity="0.3"/>
+  <line x1="71" y1="8" x2="75" y2="8" stroke="#9b7ed8" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <circle cx="92" cy="14" r="7" fill="#e05c6c" opacity="0.45"/>
+  <text x="92" y="17.5" text-anchor="middle" fill="#0e0f13" font-family="sans-serif" font-size="9" font-weight="700" opacity="0.35">$</text>
+
+  <circle cx="108" cy="11" r="2.5" fill="#5b8def" opacity="0.4"/>
+  <circle cx="114" cy="15" r="2.5" fill="#5b8def" opacity="0.35"/>
+  <circle cx="106" cy="18" r="2" fill="#5b8def" opacity="0.3"/>
+  <line x1="108" y1="11" x2="114" y2="15" stroke="#5b8def" stroke-width="0.7" opacity="0.3"/>
+  <line x1="108" y1="11" x2="106" y2="18" stroke="#5b8def" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- Funnel body -->
+  <path d="
+    M16,30
+    Q16,27 19,27
+    L109,27
+    Q112,27 112,30
+    L76,88
+    Q75,90 75,92
+    L75,110
+    Q75,113 72,113
+    L56,113
+    Q53,113 53,110
+    L53,92
+    Q53,90 52,88
+    Z
+  " fill="url(#funnel-g)" stroke="#4e4f5a" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- Filter lines -->
+  <line x1="28" y1="42" x2="100" y2="42" stroke="#4e4f5a" stroke-width="0.6" opacity="0.35" stroke-dasharray="2,3"/>
+  <line x1="38" y1="56" x2="90" y2="56" stroke="#4e4f5a" stroke-width="0.6" opacity="0.28" stroke-dasharray="2,3"/>
+  <line x1="46" y1="68" x2="82" y2="68" stroke="#4e4f5a" stroke-width="0.6" opacity="0.2" stroke-dasharray="2,3"/>
+  <line x1="50" y1="78" x2="78" y2="78" stroke="#4e4f5a" stroke-width="0.6" opacity="0.15" stroke-dasharray="2,3"/>
+
+  <!-- Output: partisan split -->
+  <rect x="42" y="115" width="18" height="7" rx="2.5" fill="#5b8def" opacity="0.85"/>
+  <rect x="66" y="115" width="18" height="7" rx="2.5" fill="#e05c6c" opacity="0.85"/>
 </svg>
