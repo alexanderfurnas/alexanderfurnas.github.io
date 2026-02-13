@@ -161,7 +161,10 @@ main {
   font-size: 0.96rem;
   color: #3a3a3a;
   line-height: 1.85;
+  margin-bottom: 0.9rem;
 }
+
+.bio p:last-child { margin-bottom: 0; }
 
 /* ——— Sections ——— */
 h2 {
