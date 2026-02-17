@@ -59,6 +59,41 @@ nav {
 
 .nav-links { display: flex; gap: 1.75rem; }
 
+/* Hamburger toggle (mobile only) */
+.nav-toggle { display: none; }
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  z-index: 102;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--text);
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+.nav-toggle-label span { top: 9px; }
+.nav-toggle-label span::before { content: ''; top: -7px; }
+.nav-toggle-label span::after { content: ''; top: 7px; }
+
+.nav-toggle:checked + .nav-toggle-label span { background: transparent; }
+.nav-toggle:checked + .nav-toggle-label span::before {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--text);
+}
+.nav-toggle:checked + .nav-toggle-label span::after {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--text);
+}
+
 .nav-links a {
   font-size: 0.82rem;
   font-weight: 400;
@@ -443,11 +478,57 @@ footer {
 @media (max-width: 600px) {
   .hero-content { flex-direction: column-reverse; gap: 1.5rem; }
   .hero-photo img { width: 120px; height: 120px; }
-  .nav-links { gap: 1rem; }
-  .nav-links a { font-size: 0.78rem; }
-  .nav-name { font-size: 0.88rem; }
   .hero h1 { font-size: 1.8rem; }
   main { padding: 2.5rem 1.25rem 4rem; }
+
+  /* Mobile hamburger menu */
+  .nav-toggle-label { display: block; }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 220px;
+    height: 100vh;
+    flex-direction: column;
+    background: rgba(250,250,248,0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.08);
+    z-index: 101;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    transform: translateX(0);
+  }
+
+  /* Overlay to close menu when tapping outside */
+  .nav-toggle:checked ~ .nav-links::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 220px);
+    height: 100vh;
+    z-index: -1;
+  }
+
+  .nav-links a {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .nav-links a.active {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .nav-name { font-size: 0.88rem; }
 }
 
 /* ——— Print ——— */
